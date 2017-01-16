@@ -33,9 +33,12 @@
             </tr>
         </table><br>
         <p>Place your orders here! You know you want to.</p><br>
-        <form action="https://ubermelon-order-form.herokuapp.com/process">
-            First Name: <input type="text" name="firstname"><br>
-            Last Name: <input type="text" name="lastname"><br>
+        <form action="https://ubermelon-order-form.herokuapp.com/process" autocomplete="on">
+            <fieldset style="display: inline-block">
+                <legend>Customer Information:</legend>
+                    First Name: <input type="text" name="firstname"><br>
+                    Last Name: <input type="text" name="lastname"><br>
+            </fieldset><br>
             Melon Type:
                 <select name="melontype">
                     <option value="watermelon">Watermelon</option>
@@ -59,8 +62,24 @@
             <input type="checkbox" name="stats" value="balloonicorn"> Balloonicorn
             <input type="checkbox" name="stats" value="yak"> Yak
             <br>
+            <textarea name="message" rows='10' cols='30'>Tell us why you love melons!
+            </textarea><br>
+             <br>
+            <input type="submit"><br>
+        </form>
+            <br>
+        <form action="action_page.php"
+            oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+            0
+            <input type="range" id="a" name="a" value="25">
+            100 + 0
+            <input type="range" id="b" name="b" value="50">
+            100 =
+            <output name="x" for="a b"></output>
+            <br><br>
             <input type="submit">
         </form>
-        <br>
+
+
         <footer>*Quantities are given by the flat.</footer>
 </html>
